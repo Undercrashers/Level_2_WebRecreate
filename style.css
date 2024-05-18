@@ -137,7 +137,7 @@ body[theme="white"] .section{
     left:0;
     flex-grow: 0;
     align-items: flex-start;
-    background-color: rgb(191, 253, 191);
+    /* background-color: rgb(191, 253, 191); */
   }
   
   .ltext p {
@@ -166,7 +166,7 @@ body[theme="white"] .section{
   
 .cards{
     width:50%;
-    background-color: rgb(244, 200, 200); 
+    /* background-color: rgb(244, 200, 200);  */
     font-size: 3vw;
 } 
 
@@ -193,14 +193,148 @@ body[theme="white"] .section{
     justify-content: flex-end; 
     padding: 0 2rem; 
 }
+.navbar .company-name {
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    padding: 0.5rem 1rem; /* Add some padding to make the blur visible */
+    border-radius: 5px; /* Optional: Add some rounding to the background */
+}
 
 .navbar .company-name a {
     color: rgb(13, 15, 132);
     text-decoration: none;
     font-size: 1.5rem; 
+    font: 600 1.5rem 'Times', sans-serif;
     transition: color 0.3s ease;
+    
 }
 
 .navbar .company-name a:hover {
     color: #ccc; 
 }
+
+/* -----------Stock------------------------- */
+.stock-ticker {
+    font-size: 15px;
+    padding-block: 8px;
+    border-block: 1px solid;
+    overflow: hidden;
+    user-select: none;
+  
+    --gap: 20px;
+    display: flex;
+    gap: var(--gap);
+  }
+  
+  .stock-ticker ul {
+    list-style: none;
+    flex-shrink: 0;
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--gap);
+  
+    animation: scroll 20s linear infinite;
+  }
+  
+  .stock-ticker:hover ul {
+    animation-play-state: paused;
+  }
+  
+  @keyframes scroll {
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  
+  .stock-ticker ul:first-child {
+    /* background-color: yellow; */
+  }
+  
+  .stock-ticker ul:last-child {
+    /* background-color: pink; */
+  }
+  
+  .stock-ticker .company,
+  .stock-ticker .price {
+    font-weight: bold;
+  }
+  
+  .stock-ticker .price {
+    margin-inline: 4px;
+  }
+  
+  .stock-ticker .plus::before {
+    content: "↑";
+  }
+  
+  .stock-ticker .minus::before {
+    content: "↓";
+  }
+  
+  .stock-ticker .plus .change,
+  .stock-ticker .plus::before {
+    color: #089981;
+  }
+  
+  .stock-ticker .minus .change,
+  .stock-ticker .minus::before {
+    color: #f23645;
+  }
+  
+  /* ---------Animated Card------------- */
+  .animated_card a{
+   z-index: 5;
+   font:100 0.6em 'Times', sans-serif;
+   color: rgb(255, 248, 248);
+   text-align: center;
+  }
+
+  .animated_card{ 
+  display: grid; 
+  place-items: center; 
+  position: relative; 
+  height: 200px; 
+  width: 350px; 
+  margin:2vw;
+  background: #222; 
+  border-radius: 4vw;
+  cursor: pointer; 
+  } 
+
+
+ .animated_card{
+  overflow: hidden;
+  }
+  
+  .animated_card::before{
+  position: absolute;
+  content: '';
+  width: 50%;
+  height: 180%;
+  background-color: #fff;
+  transform: rotate(45deg);
+  
+  }
+  
+  .animated_card:hover::before{
+  animation: animate2 3.5s linear infinite;
+  
+  }
+@keyframes animate2{
+  from{ 
+  transform: rotate(0deg); 
+  
+  }
+  to{ 
+  transform: rotate(360deg);
+    }
+}
+  
+  .animated_card::after{
+  position: absolute; 
+  content: ''; 
+  inset: 5px; 
+  background: #222; 
+  border-radius: 8px; 
+  }
