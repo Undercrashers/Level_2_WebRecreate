@@ -1,0 +1,206 @@
+:root{
+    --salmon:#EF9D71;
+    --black:#000;
+    --white:#fff;
+    --cyan:#AEDEE0;
+    --dsalmon:rgb(87, 10, 1);
+    --dcyan:#000000;
+}
+
+*::selection{
+    background-color: var(--salmon);
+}
+
+body[theme="black"]{
+    background-color: var(--black);
+}
+body[theme="black"] .section{
+    color: var(--white);
+}
+
+body[theme="cyan"]{
+    background-color: var(--cyan);
+}
+body[theme="cyan"] .section{
+   color: var(--dcyan);
+}
+
+body[theme="salmon"]{
+    background-color: var(--salmon);
+}
+
+body[theme="salmon"] .section{
+    color: var(--dsalmon);
+}
+
+body[theme="white"]{
+    background-color: var(--white);
+}
+body[theme="white"] .section{
+    color: var(--black);
+}
+
+
+/* Navbar */
+.main{
+    width: 100%;
+    overflow: hidden;
+}
+.home section{
+    height: screen;
+    display: relative;
+}
+.vdodiv {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    clip-path:circle(var(--clip) at 50% 50%);
+}
+.video-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.marqueescontainer{
+    width: 100%;
+    height:screen;
+    /* display:relative; */
+    overflow:hidden;
+}
+
+.heading {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65%;
+    text-align: center;
+}
+.heading h1{
+    font: 700 1.8vw 'Time', sans-serif;
+    
+}
+.warren img {
+    width: 25vw;
+    height: 40vw;
+    position: relative;
+    display: flex;
+    margin: 2%;
+    object-fit: cover;
+    border-radius: 20%;
+}
+.warren img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.warren{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.warren p{
+    font: 400 1.3vw 'Times', sans-serif;
+   margin: 5%;
+   padding-top: 5%;
+}
+.imp{
+    font: 700 1.3vw 'Times', sans-serif;
+}
+
+.craft {
+    display: flex;
+    gap: 10px; 
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 8vw;
+    margin-top: 2vw;
+    flex-grow: 0;
+    align-items: flex-start;
+  }
+  
+  .ltext {
+    width: 45%;
+    padding: 10px;
+    position: sticky;
+    top:0;
+    left:0;
+    flex-grow: 0;
+    align-items: flex-start;
+    background-color: rgb(191, 253, 191);
+  }
+  
+  .ltext p {
+    font-size: 1.2rem; 
+    font-weight: lighter;
+    line-height: 1.7rem; 
+    
+  }
+  
+  .heading1 {
+    font-size: 3rem;
+    line-height: 4rem; 
+    margin-top: 20px;
+    font-family: sans-serif;
+  }
+  
+  .button {
+    display: inline-flex;
+    padding: 8px 16px; 
+    border: 1px solid #227bff; 
+  }
+  
+  .button span {
+    display: inline-block;
+  }
+  
+.cards{
+    width:50%;
+    background-color: rgb(244, 200, 200); 
+    font-size: 3vw;
+} 
+
+.btmtext{
+    font-size: 1.5vw;
+    font-weight: 500;
+    font-family: 'Pacifico', cursive;
+    text-align: right;
+    z-index:1;
+}
+
+
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    width: 100%;
+    color: rgb(13, 15, 132); 
+    padding: 1rem 0;
+    z-index: 10;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: flex-end; 
+    padding: 0 2rem; 
+}
+
+.navbar .company-name a {
+    color: rgb(13, 15, 132);
+    text-decoration: none;
+    font-size: 1.5rem; 
+    transition: color 0.3s ease;
+}
+
+.navbar .company-name a:hover {
+    color: #ccc; 
+}
