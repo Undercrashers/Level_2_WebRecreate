@@ -1,4 +1,5 @@
-gsap.registerPlugin(ScrollTrigger); // Initialize ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger); 
+
 
 gsap.to(".vdodiv", {
     scrollTrigger: {
@@ -9,7 +10,7 @@ gsap.to(".vdodiv", {
         scrub: true
     },
     '--clip': "0%",
-    ease: "power2", // or any other GSAP easing function like "Power2.easeInOut"
+    ease: "power2", 
     duration: 2
 });
 
@@ -23,3 +24,14 @@ const cards = document.querySelectorAll(".card");
                     cardContent.style.maxHeight = 0;
                   });
                 });
+
+
+                
+   
+                
+  let flag = 0
+  const scroll = new LocomotiveScroll({
+  el: document.querySelector('#main'),
+  smooth: true
+});           
+                
