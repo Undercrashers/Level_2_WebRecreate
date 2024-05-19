@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berkshire Hathaway Inc. - Shareholder Letters</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header class="main-header">
+        <h1 class="main-title"><span class="design">B</span>ERKSHIRE<span class="design">  H</span>ATHAWAY <span class="design2">  INC.</span></h1>
+        <h2 class="sub-title">SHAREHOLDER LETTERS</h2>
+    </header>
+    <body>
+    <div class="content-container">
+        <div class="dropdown-box">
+            <h3>Select Year to Download Shareholder Letter</h3>
+            <select id="year-select">
+                <option value="">Select Year</option>
+                <script>
+                    const yearSelect = document.getElementById('year-select');
+                    for (let year = 2024; year >= 1995; year--) {
+                        const option = document.createElement('option');
+                        option.value = year;
+                        option.textContent = year;
+                        yearSelect.appendChild(option);
+                    }
+                </script>
+            </select>
+            <button class="download-button">Download Letter</button>
+        </div>
+        
+        <div class="info-box">
+            <p>For shareholders and others who are interested, a book that compiles the full unedited versions of each of Warren Buffett’s letters to shareholders between 1965 and 2014 is available for sale at this <a href="#">link</a>.</p>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>ALL SHAREHOLDER LETTERS INCLUDE COPYRIGHTED MATERIAL REPRODUCED WITH PERMISSION</p>
+    </footer>
+</body>
+</html>
